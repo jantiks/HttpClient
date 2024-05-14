@@ -12,8 +12,11 @@ Response::Response(const long statusCode, const std::map<std::string, std::strin
 Response::Response(long statusCode, std::map<std::string, std::string>&& headers, std::string&& responseText):statusCode_(statusCode), headers_(headers), responseText_(responseText) {};
 
 std::ostream& operator<<(std::ostream& os, const Response& response) {
-    os << "Status Code: " << response.statusCode() << "\n"
-//       << "Headers: " << response.headers() << "\n"
-       << "Response Text: " << response.responseText();
+    os << "Status Code: " << response.statusCode() << "\n";
+    os << "Headers: \n";
+    for (const auto& header : response.headers()) {
+        os << header.first << ": " << header.second << "\n";
+    }
+    os << "Response Text: " << response.responseText();
     return os;
 }
