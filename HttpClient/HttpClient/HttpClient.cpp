@@ -13,7 +13,7 @@ Response HttpClient::Request(const std::string& url, const std::vector<std::stri
 {
     std::string& response = performRequest(url, headers);
     std::cout << response << std::endl;
-    return Response("201", "headers", "someText");
+    return Response(201, "headers", "someText");
 }
 
 

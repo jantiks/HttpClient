@@ -13,19 +13,19 @@
 
 class Response {
 private:
-    std::string statusCode_;
+    long statusCode_;
     std::string headers_;
     std::string responseText_;
 public:
-    Response(const std::string& statusCode, const std::string& headers, const std::string& responseText);
-    Response(std::string&& statusCode, std::string&& headers, std::string&& responseText);
+    Response(const long statusCode, const std::string& headers, const std::string& responseText);
+    Response(long statusCode, std::string&& headers, std::string&& responseText);
 
-    const std::string& statusCode() const;
+    const long statusCode() const;
     const std::string& headers() const;
     const std::string& responseText() const;
 };
 
-inline const std::string& Response::statusCode() const {
+inline const long Response::statusCode() const {
     return statusCode_;
 }
 

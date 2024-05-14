@@ -7,6 +7,6 @@
 
 #include "Response.hpp"
 
-Response::Response(const std::string& statusCode, const std::string& headers, const std::string& responseText):statusCode_(statusCode), headers_(headers), responseText_(responseText) {};
+Response::Response(const long statusCode, const std::string& headers, const std::string& responseText):statusCode_(statusCode), headers_(headers), responseText_(responseText) {};
 
-Response::Response(std::string&& statusCode, std::string&& headers, std::string&& responseText):statusCode_(statusCode), headers_(headers), responseText_(responseText) {};
+Response::Response(long statusCode, std::string&& headers, std::string&& responseText):statusCode_(statusCode), headers_(headers), responseText_(responseText) {};
