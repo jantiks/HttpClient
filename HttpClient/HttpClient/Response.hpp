@@ -10,18 +10,19 @@
 
 #include <stdio.h>
 #include <iostream>
+#include <map>
 
 class Response {
 private:
     long statusCode_;
-    std::string headers_;
+    std::map<std::string, std::string> headers_;
     std::string responseText_;
 public:
-    Response(const long statusCode, const std::string& headers, const std::string& responseText);
-    Response(long statusCode, std::string&& headers, std::string&& responseText);
+    Response(const long statusCode, const std::map<std::string, std::string>& headers, const std::string& responseText);
+    Response(long statusCode, std::map<std::string, std::string>&& headers, std::string&& responseText);
 
     const long statusCode() const;
-    const std::string& headers() const;
+    const std::map<std::string, std::string>& headers() const;
     const std::string& responseText() const;
 
     friend std::ostream& operator<<(std::ostream& os, const Response& response);
@@ -31,7 +32,7 @@ inline const long Response::statusCode() const {
     return statusCode_;
 }
 
-inline const std::string& Response::headers() const {
+inline const std::map<std::string, std::string>& Response::headers() const {
     return headers_;
 }
 

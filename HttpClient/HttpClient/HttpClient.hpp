@@ -10,6 +10,7 @@
 
 #include <stdio.h>
 #include "iostream"
+#include "map"
 #include "Response.hpp"
 
 enum class HTTPMethod { GET, POST };
@@ -20,5 +21,6 @@ public:
 private:
     static size_t WriteCallback(void* contents, size_t size, size_t nmemb, void* userp);
     static Response performRequest(const std::string& url, const std::vector<std::string>& headers, const char* postData = nullptr);
+    static std::map<std::string, std::string> parseHeaders(const std::string& fromString);
 };
 #endif /* HttpClient_hpp */
