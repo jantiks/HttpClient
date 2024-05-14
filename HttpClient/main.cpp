@@ -8,6 +8,17 @@
 #include <iostream>
 #include "HttpClient.hpp"
 
+class MyJsonResponseBody : public BaseJsonResponseBody {
+public:
+    std::string myPropery;
+    MyJsonResponseBody()
+        : BaseJsonResponseBody() {}
+
+    void decode(const nlohmann::json& json) override {
+        myPropery = json["myPropertyKey"];
+    }
+};
+
 void testGetRequest() {
     std::vector<std::string> headers = { "Content-Type: application/json" };
     std::string url = "https://jsonplaceholder.typicode.com/posts/1";
@@ -26,6 +37,7 @@ void testPostRequest() {
     std::string requestBody = R"({"title": "foo", "body": "bar", "userId": 1})";
 
     try {
+        MyJsonResponseBody responseBody;
         Response response = HttpClient::Request(url, headers, HTTPMethod::POST, requestBody);
         std::cout << "POST Response: \n" << response.getJsonResponse() << std::endl;
     } catch (const std::exception& e) {

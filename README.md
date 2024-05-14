@@ -145,18 +145,18 @@ This project is a C++ HTTP client library designed to make HTTP requests. The cl
 
 class MyJsonResponseBody : public BaseJsonResponseBody {
 public:
-    MyJsonResponseBody(long statusCode, const std::map<std::string, std::string>& headers)
-        : BaseJsonResponseBody(statusCode, headers) {}
+    std::string myPropery;
+    MyJsonResponseBody()
+        : BaseJsonResponseBody() {}
 
     void decode(const nlohmann::json& json) override {
-        // Implement JSON decoding logic here
-        std::cout << "Decoded JSON: " << json.dump() << std::endl;
+        myPropery = json["myPropertyKey"];
     }
 };
 
 int main() {
     std::vector<std::string> headers = { "Content-Type: application/json" };
-    MyJsonResponseBody responseBody(0, headers);
+    MyJsonResponseBody responseBody;
 
     try {
         HttpClient::Request("http://example.com/api", headers, HTTPMethod::GET, responseBody);
