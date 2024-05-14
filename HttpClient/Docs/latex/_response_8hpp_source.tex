@@ -1,0 +1,50 @@
+\doxysection{Response.\+hpp}
+\hypertarget{_response_8hpp_source}{}\label{_response_8hpp_source}\index{/Users/tigran/Desktop/Classes/cpp/HttpClient/HttpClient/HttpClient/Response.hpp@{/Users/tigran/Desktop/Classes/cpp/HttpClient/HttpClient/HttpClient/Response.hpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{//}}
+\DoxyCodeLine{00002\ \textcolor{comment}{//\ \ Response.hpp}}
+\DoxyCodeLine{00003\ \textcolor{comment}{//\ \ HttpClient}}
+\DoxyCodeLine{00004\ \textcolor{comment}{//}}
+\DoxyCodeLine{00005\ \textcolor{comment}{//\ \ Created\ by\ Tigran\ on\ 14.05.24.}}
+\DoxyCodeLine{00006\ \textcolor{comment}{//}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#ifndef\ Response\_hpp}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#define\ Response\_hpp}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <stdio.h>}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ <map>}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ "{}json.hpp"{}}}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_response}{Response}}\ \{}
+\DoxyCodeLine{00017\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keywordtype}{long}\ statusCode\_;}
+\DoxyCodeLine{00019\ \ \ \ \ std::map<std::string,\ std::string>\ headers\_;}
+\DoxyCodeLine{00020\ \ \ \ \ std::string\ responseText\_;}
+\DoxyCodeLine{00021\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00022\ \ \ \ \ \mbox{\hyperlink{class_response}{Response}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{long}\ statusCode,\ \textcolor{keyword}{const}\ std::map<std::string,\ std::string>\&\ headers,\ \textcolor{keyword}{const}\ std::string\&\ responseText);}
+\DoxyCodeLine{00023\ \ \ \ \ \mbox{\hyperlink{class_response}{Response}}(\textcolor{keywordtype}{long}\ statusCode,\ std::map<std::string,\ std::string>\&\&\ headers,\ std::string\&\&\ responseText);}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{long}\ statusCode()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keyword}{const}\ std::map<std::string,\ std::string>\&\ headers()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keyword}{const}\ std::string\&\ responseText()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keyword}{friend}\ std::ostream\&\ operator<<(std::ostream\&\ os,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_response}{Response}}\&\ response);}
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keyword}{const}\ nlohmann::json\ getJsonResponse()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00031\ \};}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ \textcolor{keyword}{inline}\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{long}\ Response::statusCode()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keywordflow}{return}\ statusCode\_;}
+\DoxyCodeLine{00035\ \}}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00037\ \textcolor{keyword}{inline}\ \textcolor{keyword}{const}\ std::map<std::string,\ std::string>\&\ Response::headers()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keywordflow}{return}\ headers\_;}
+\DoxyCodeLine{00039\ \}}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00041\ \textcolor{keyword}{inline}\ \textcolor{keyword}{const}\ std::string\&\ Response::responseText()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keywordflow}{return}\ responseText\_;}
+\DoxyCodeLine{00043\ \}}
+\DoxyCodeLine{00044\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ Response\_hpp\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

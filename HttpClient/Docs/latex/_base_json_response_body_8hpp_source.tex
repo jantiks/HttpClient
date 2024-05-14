@@ -1,0 +1,32 @@
+\doxysection{Base\+Json\+Response\+Body.\+hpp}
+\hypertarget{_base_json_response_body_8hpp_source}{}\label{_base_json_response_body_8hpp_source}\index{/Users/tigran/Desktop/Classes/cpp/HttpClient/HttpClient/HttpClient/BaseJsonResponseBody.hpp@{/Users/tigran/Desktop/Classes/cpp/HttpClient/HttpClient/HttpClient/BaseJsonResponseBody.hpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{//}}
+\DoxyCodeLine{00002\ \textcolor{comment}{//\ \ BaseHttpResponseBody.hpp}}
+\DoxyCodeLine{00003\ \textcolor{comment}{//\ \ HttpClient}}
+\DoxyCodeLine{00004\ \textcolor{comment}{//}}
+\DoxyCodeLine{00005\ \textcolor{comment}{//\ \ Created\ by\ Tigran\ on\ 14.05.24.}}
+\DoxyCodeLine{00006\ \textcolor{comment}{//}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#ifndef\ BaseHttpResponseBody\_hpp}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#define\ BaseHttpResponseBody\_hpp}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <stdio.h>}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ "{}../json.hpp"{}}}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_base_json_response_body}{BaseJsonResponseBody}}\ \{}
+\DoxyCodeLine{00015\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keywordtype}{long}\ statusCode\_;}
+\DoxyCodeLine{00017\ \ \ \ \ std::map<std::string,\ std::string>\ headers\_;}
+\DoxyCodeLine{00018\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00019\ \ \ \ \ \mbox{\hyperlink{class_base_json_response_body}{BaseJsonResponseBody}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{long}\ statusCode,\ \textcolor{keyword}{const}\ std::map<std::string,\ std::string>\&\ headers)}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \ :\ statusCode\_(statusCode),\ headers\_(std::move(headers))\ \{\}}
+\DoxyCodeLine{00021\ \ \ \ \ \mbox{\hyperlink{class_base_json_response_body}{BaseJsonResponseBody}}(\textcolor{keywordtype}{long}\ statusCode,\ std::map<std::string,\ std::string>\&\&\ headers)}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \ :\ statusCode\_(statusCode),\ headers\_(std::move(headers))\ \{\}}
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{class_base_json_response_body}{\string~BaseJsonResponseBody}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ decode\ (\textcolor{keyword}{const}\ nlohmann::json\&\ json)\ =\ 0;}
+\DoxyCodeLine{00025\ \};}
+\DoxyCodeLine{00026\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ BaseHttpResponseBody\_hpp\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}
