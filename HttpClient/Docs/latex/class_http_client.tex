@@ -3,12 +3,60 @@
 \doxysubsubsection*{Static Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\Hypertarget{class_http_client_a24e993b14793a9174461893adf8226ce}\label{class_http_client_a24e993b14793a9174461893adf8226ce} 
-static \mbox{\hyperlink{class_response}{Response}} {\bfseries Request} (const std\+::string \&url, const std\+::vector$<$ std\+::string $>$ \&headers, HTTPMethod request\+Method, const std\+::string \&request\+Body="{}"{})
-\item 
+static \mbox{\hyperlink{class_response}{Response}} \mbox{\hyperlink{class_http_client_a24e993b14793a9174461893adf8226ce}{Request}} (const std\+::string \&url, const std\+::vector$<$ std\+::string $>$ \&headers, HTTPMethod request\+Method, const std\+::string \&request\+Body="{}"{})
+\begin{DoxyCompactList}\small\item\em Sends an HTTP request and returns the response. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{class_http_client_addf6cd5704e9c3e7be72e8f49735dc99}{Request}} (const std\+::string \&url, const std\+::vector$<$ std\+::string $>$ \&headers, HTTPMethod request\+Method, \mbox{\hyperlink{class_base_json_response_body}{Base\+Json\+Response\+Body}} \&response\+Body, const std\+::string \&request\+Body="{}"{})
+\begin{DoxyCompactList}\small\item\em Sends an HTTP request and decodes the JSON response into a \doxylink{class_base_json_response_body}{Base\+Json\+Response\+Body} object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
 \Hypertarget{class_http_client_addf6cd5704e9c3e7be72e8f49735dc99}\label{class_http_client_addf6cd5704e9c3e7be72e8f49735dc99} 
-static void {\bfseries Request} (const std\+::string \&url, const std\+::vector$<$ std\+::string $>$ \&headers, HTTPMethod request\+Method, \mbox{\hyperlink{class_base_json_response_body}{Base\+Json\+Response\+Body}} \&response\+Body, const std\+::string \&request\+Body="{}"{})
-\end{DoxyCompactItemize}
+\index{HttpClient@{HttpClient}!Request@{Request}}
+\index{Request@{Request}!HttpClient@{HttpClient}}
+\doxysubsubsection{\texorpdfstring{Request()}{Request()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Http\+Client\+::\+Request (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{url,  }\item[{const std\+::vector$<$ std\+::string $>$ \&}]{headers,  }\item[{HTTPMethod}]{request\+Method,  }\item[{\mbox{\hyperlink{class_base_json_response_body}{Base\+Json\+Response\+Body}} \&}]{response\+Body,  }\item[{const std\+::string \&}]{request\+Body = {\ttfamily "{}"{}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Sends an HTTP request and decodes the JSON response into a \doxylink{class_base_json_response_body}{Base\+Json\+Response\+Body} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em url} & URL to send the request to. \\
+\hline
+{\em headers} & Headers for the request \\
+\hline
+{\em request\+Method} & (GET, POST, PUT, DELETE). \\
+\hline
+{\em response\+Body} & The object to decode the JSON response into. \\
+\hline
+{\em request\+Body} & The body of the request (used for POST and PUT). \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_http_client_a24e993b14793a9174461893adf8226ce}\label{class_http_client_a24e993b14793a9174461893adf8226ce} 
+\index{HttpClient@{HttpClient}!Request@{Request}}
+\index{Request@{Request}!HttpClient@{HttpClient}}
+\doxysubsubsection{\texorpdfstring{Request()}{Request()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_response}{Response}} Http\+Client\+::\+Request (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{url,  }\item[{const std\+::vector$<$ std\+::string $>$ \&}]{headers,  }\item[{HTTPMethod}]{request\+Method,  }\item[{const std\+::string \&}]{request\+Body = {\ttfamily "{}"{}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Sends an HTTP request and returns the response. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em url} & URL to send the request to. \\
+\hline
+{\em headers} & Headers for the request \\
+\hline
+{\em request\+Method} & (GET, POST, PUT, DELETE). \\
+\hline
+{\em request\+Body} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{class_response}{Response} The response from the server. 
+\end{DoxyReturn}
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}

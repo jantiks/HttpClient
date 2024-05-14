@@ -17,34 +17,40 @@
 \DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ <map>}}
 \DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ "{}json.hpp"{}}}
 \DoxyCodeLine{00015\ }
-\DoxyCodeLine{00016\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_response}{Response}}\ \{}
-\DoxyCodeLine{00017\ \textcolor{keyword}{private}:}
-\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keywordtype}{long}\ statusCode\_;}
-\DoxyCodeLine{00019\ \ \ \ \ std::map<std::string,\ std::string>\ headers\_;}
-\DoxyCodeLine{00020\ \ \ \ \ std::string\ responseText\_;}
-\DoxyCodeLine{00021\ \textcolor{keyword}{public}:}
-\DoxyCodeLine{00022\ \ \ \ \ \mbox{\hyperlink{class_response}{Response}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{long}\ statusCode,\ \textcolor{keyword}{const}\ std::map<std::string,\ std::string>\&\ headers,\ \textcolor{keyword}{const}\ std::string\&\ responseText);}
-\DoxyCodeLine{00023\ \ \ \ \ \mbox{\hyperlink{class_response}{Response}}(\textcolor{keywordtype}{long}\ statusCode,\ std::map<std::string,\ std::string>\&\&\ headers,\ std::string\&\&\ responseText);}
+\DoxyCodeLine{00019\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_response}{Response}}\ \{}
+\DoxyCodeLine{00020\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keywordtype}{long}\ statusCode\_;\ }
+\DoxyCodeLine{00022\ \ \ \ \ std::map<std::string,\ std::string>\ headers\_;\ }
+\DoxyCodeLine{00023\ \ \ \ \ std::string\ responseText\_;\ }
 \DoxyCodeLine{00024\ }
-\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{long}\ statusCode()\ \textcolor{keyword}{const};}
-\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keyword}{const}\ std::map<std::string,\ std::string>\&\ headers()\ \textcolor{keyword}{const};}
-\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keyword}{const}\ std::string\&\ responseText()\ \textcolor{keyword}{const};}
-\DoxyCodeLine{00028\ }
-\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keyword}{friend}\ std::ostream\&\ operator<<(std::ostream\&\ os,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_response}{Response}}\&\ response);}
-\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keyword}{const}\ nlohmann::json\ getJsonResponse()\ \textcolor{keyword}{const};}
-\DoxyCodeLine{00031\ \};}
-\DoxyCodeLine{00032\ }
-\DoxyCodeLine{00033\ \textcolor{keyword}{inline}\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{long}\ Response::statusCode()\textcolor{keyword}{\ const\ }\{}
-\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keywordflow}{return}\ statusCode\_;}
-\DoxyCodeLine{00035\ \}}
-\DoxyCodeLine{00036\ }
-\DoxyCodeLine{00037\ \textcolor{keyword}{inline}\ \textcolor{keyword}{const}\ std::map<std::string,\ std::string>\&\ Response::headers()\textcolor{keyword}{\ const\ }\{}
-\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keywordflow}{return}\ headers\_;}
-\DoxyCodeLine{00039\ \}}
-\DoxyCodeLine{00040\ }
-\DoxyCodeLine{00041\ \textcolor{keyword}{inline}\ \textcolor{keyword}{const}\ std::string\&\ Response::responseText()\textcolor{keyword}{\ const\ }\{}
-\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keywordflow}{return}\ responseText\_;}
-\DoxyCodeLine{00043\ \}}
-\DoxyCodeLine{00044\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ Response\_hpp\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00025\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00033\ \ \ \ \ \mbox{\hyperlink{class_response_aae9cb792b6394320d15d6781f171376f}{Response}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{long}\ \mbox{\hyperlink{class_response_acf680961b814c9d3e63a68cc0befc0ce}{statusCode}},\ \textcolor{keyword}{const}\ std::map<std::string,\ std::string>\&\ \mbox{\hyperlink{class_response_a2a87bed3da61814117ce90d3dd5ca834}{headers}},\ \textcolor{keyword}{const}\ std::string\&\ \mbox{\hyperlink{class_response_a2472c38e9a2d20b89b67c9db3836196d}{responseText}});}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00042\ \ \ \ \ \mbox{\hyperlink{class_response_aae9cb792b6394320d15d6781f171376f}{Response}}(\textcolor{keywordtype}{long}\ \mbox{\hyperlink{class_response_acf680961b814c9d3e63a68cc0befc0ce}{statusCode}},\ std::map<std::string,\ std::string>\&\&\ \mbox{\hyperlink{class_response_a2a87bed3da61814117ce90d3dd5ca834}{headers}},\ std::string\&\&\ \mbox{\hyperlink{class_response_a2472c38e9a2d20b89b67c9db3836196d}{responseText}});}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00049\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{long}\ \mbox{\hyperlink{class_response_acf680961b814c9d3e63a68cc0befc0ce}{statusCode}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00056\ \ \ \ \ \textcolor{keyword}{const}\ std::map<std::string,\ std::string>\&\ \mbox{\hyperlink{class_response_a2a87bed3da61814117ce90d3dd5ca834}{headers}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00063\ \ \ \ \ \textcolor{keyword}{const}\ std::string\&\ \mbox{\hyperlink{class_response_a2472c38e9a2d20b89b67c9db3836196d}{responseText}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00072\ \ \ \ \ \textcolor{keyword}{friend}\ std::ostream\&\ \mbox{\hyperlink{class_response_a0737244e63f166387972f11d844881d0}{operator<<}}(std::ostream\&\ os,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_response}{Response}}\&\ response);}
+\DoxyCodeLine{00073\ }
+\DoxyCodeLine{00079\ \ \ \ \ \textcolor{keyword}{const}\ nlohmann::json\ \mbox{\hyperlink{class_response_a9dd2135de294340683f8d1afcdd1cfbc}{getJsonResponse}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00080\ \};}
+\DoxyCodeLine{00081\ }
+\DoxyCodeLine{00087\ \textcolor{keyword}{inline}\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{long}\ \mbox{\hyperlink{class_response_acf680961b814c9d3e63a68cc0befc0ce}{Response::statusCode}}()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00088\ \ \ \ \ \textcolor{keywordflow}{return}\ statusCode\_;}
+\DoxyCodeLine{00089\ \}}
+\DoxyCodeLine{00090\ }
+\DoxyCodeLine{00096\ \textcolor{keyword}{inline}\ \textcolor{keyword}{const}\ std::map<std::string,\ std::string>\&\ \mbox{\hyperlink{class_response_a2a87bed3da61814117ce90d3dd5ca834}{Response::headers}}()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00097\ \ \ \ \ \textcolor{keywordflow}{return}\ headers\_;}
+\DoxyCodeLine{00098\ \}}
+\DoxyCodeLine{00099\ }
+\DoxyCodeLine{00105\ \textcolor{keyword}{inline}\ \textcolor{keyword}{const}\ std::string\&\ \mbox{\hyperlink{class_response_a2472c38e9a2d20b89b67c9db3836196d}{Response::responseText}}()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00106\ \ \ \ \ \textcolor{keywordflow}{return}\ responseText\_;}
+\DoxyCodeLine{00107\ \}}
+\DoxyCodeLine{00108\ }
+\DoxyCodeLine{00109\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ Response\_hpp\ */}\textcolor{preprocessor}{}}
 
 \end{DoxyCode}

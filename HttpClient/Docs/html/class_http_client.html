@@ -80,13 +80,121 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:a24e993b14793a9174461893adf8226ce" id="r_a24e993b14793a9174461893adf8226ce"><td class="memItemLeft" align="right" valign="top"><a id="a24e993b14793a9174461893adf8226ce" name="a24e993b14793a9174461893adf8226ce"></a>
-static <a class="el" href="class_response.html">Response</a>&#160;</td><td class="memItemRight" valign="bottom"><b>Request</b> (const std::string &amp;url, const std::vector&lt; std::string &gt; &amp;headers, HTTPMethod requestMethod, const std::string &amp;requestBody=&quot;&quot;)</td></tr>
+<tr class="memitem:a24e993b14793a9174461893adf8226ce" id="r_a24e993b14793a9174461893adf8226ce"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_response.html">Response</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a24e993b14793a9174461893adf8226ce">Request</a> (const std::string &amp;url, const std::vector&lt; std::string &gt; &amp;headers, HTTPMethod requestMethod, const std::string &amp;requestBody=&quot;&quot;)</td></tr>
+<tr class="memdesc:a24e993b14793a9174461893adf8226ce"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sends an HTTP request and returns the response.  <br /></td></tr>
 <tr class="separator:a24e993b14793a9174461893adf8226ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:addf6cd5704e9c3e7be72e8f49735dc99" id="r_addf6cd5704e9c3e7be72e8f49735dc99"><td class="memItemLeft" align="right" valign="top"><a id="addf6cd5704e9c3e7be72e8f49735dc99" name="addf6cd5704e9c3e7be72e8f49735dc99"></a>
-static void&#160;</td><td class="memItemRight" valign="bottom"><b>Request</b> (const std::string &amp;url, const std::vector&lt; std::string &gt; &amp;headers, HTTPMethod requestMethod, <a class="el" href="class_base_json_response_body.html">BaseJsonResponseBody</a> &amp;responseBody, const std::string &amp;requestBody=&quot;&quot;)</td></tr>
+<tr class="memitem:addf6cd5704e9c3e7be72e8f49735dc99" id="r_addf6cd5704e9c3e7be72e8f49735dc99"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#addf6cd5704e9c3e7be72e8f49735dc99">Request</a> (const std::string &amp;url, const std::vector&lt; std::string &gt; &amp;headers, HTTPMethod requestMethod, <a class="el" href="class_base_json_response_body.html">BaseJsonResponseBody</a> &amp;responseBody, const std::string &amp;requestBody=&quot;&quot;)</td></tr>
+<tr class="memdesc:addf6cd5704e9c3e7be72e8f49735dc99"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sends an HTTP request and decodes the JSON response into a <a class="el" href="class_base_json_response_body.html" title="A base class for handling JSON response bodies.">BaseJsonResponseBody</a> object.  <br /></td></tr>
 <tr class="separator:addf6cd5704e9c3e7be72e8f49735dc99"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="addf6cd5704e9c3e7be72e8f49735dc99" name="addf6cd5704e9c3e7be72e8f49735dc99"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#addf6cd5704e9c3e7be72e8f49735dc99">&#9670;&#160;</a></span>Request() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void HttpClient::Request </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>url</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::vector&lt; std::string &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>headers</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">HTTPMethod</td>          <td class="paramname"><span class="paramname"><em>requestMethod</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_base_json_response_body.html">BaseJsonResponseBody</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>responseBody</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>requestBody</em><span class="paramdefsep"> = </span><span class="paramdefval">&quot;&quot;</span></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Sends an HTTP request and decodes the JSON response into a <a class="el" href="class_base_json_response_body.html" title="A base class for handling JSON response bodies.">BaseJsonResponseBody</a> object. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">url</td><td>URL to send the request to. </td></tr>
+    <tr><td class="paramname">headers</td><td>Headers for the request </td></tr>
+    <tr><td class="paramname">requestMethod</td><td>(GET, POST, PUT, DELETE). </td></tr>
+    <tr><td class="paramname">responseBody</td><td>The object to decode the JSON response into. </td></tr>
+    <tr><td class="paramname">requestBody</td><td>The body of the request (used for POST and PUT). </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a24e993b14793a9174461893adf8226ce" name="a24e993b14793a9174461893adf8226ce"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a24e993b14793a9174461893adf8226ce">&#9670;&#160;</a></span>Request() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_response.html">Response</a> HttpClient::Request </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>url</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::vector&lt; std::string &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>headers</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">HTTPMethod</td>          <td class="paramname"><span class="paramname"><em>requestMethod</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>requestBody</em><span class="paramdefsep"> = </span><span class="paramdefval">&quot;&quot;</span></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Sends an HTTP request and returns the response. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">url</td><td>URL to send the request to. </td></tr>
+    <tr><td class="paramname">headers</td><td>Headers for the request </td></tr>
+    <tr><td class="paramname">requestMethod</td><td>(GET, POST, PUT, DELETE). </td></tr>
+    <tr><td class="paramname">requestBody</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="class_response.html" title="A class representing an HTTP response. (Not neccisseraly JSON response, any textual response)">Response</a> The response from the server. </dd></dl>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>/Users/tigran/Desktop/Classes/cpp/HttpClient/HttpClient/HttpClient/<a class="el" href="_http_client_8hpp_source.html">HttpClient.hpp</a></li>
 <li>/Users/tigran/Desktop/Classes/cpp/HttpClient/HttpClient/HttpClient/<b>HttpClient.cpp</b></li>

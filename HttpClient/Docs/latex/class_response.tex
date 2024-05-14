@@ -1,32 +1,160 @@
 \doxysection{Response Class Reference}
 \hypertarget{class_response}{}\label{class_response}\index{Response@{Response}}
+
+
+A class representing an HTTP response. (Not neccisseraly JSON response, any textual response)  
+
+
+
+
+{\ttfamily \#include $<$Response.\+hpp$>$}
+
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\Hypertarget{class_response_aae9cb792b6394320d15d6781f171376f}\label{class_response_aae9cb792b6394320d15d6781f171376f} 
-{\bfseries Response} (const long status\+Code, const std\+::map$<$ std\+::string, std\+::string $>$ \&headers, const std\+::string \&response\+Text)
-\item 
-\Hypertarget{class_response_a730dbcf91efdcd0255c517b246549d6d}\label{class_response_a730dbcf91efdcd0255c517b246549d6d} 
-{\bfseries Response} (long status\+Code, std\+::map$<$ std\+::string, std\+::string $>$ \&\&headers, std\+::string \&\&response\+Text)
-\item 
-\Hypertarget{class_response_acf680961b814c9d3e63a68cc0befc0ce}\label{class_response_acf680961b814c9d3e63a68cc0befc0ce} 
-const long {\bfseries status\+Code} () const
-\item 
-\Hypertarget{class_response_a2a87bed3da61814117ce90d3dd5ca834}\label{class_response_a2a87bed3da61814117ce90d3dd5ca834} 
-const std\+::map$<$ std\+::string, std\+::string $>$ \& {\bfseries headers} () const
-\item 
-\Hypertarget{class_response_a2472c38e9a2d20b89b67c9db3836196d}\label{class_response_a2472c38e9a2d20b89b67c9db3836196d} 
-const std\+::string \& {\bfseries response\+Text} () const
-\item 
-\Hypertarget{class_response_a9dd2135de294340683f8d1afcdd1cfbc}\label{class_response_a9dd2135de294340683f8d1afcdd1cfbc} 
-const nlohmann\+::json {\bfseries get\+Json\+Response} () const
-\end{DoxyCompactItemize}
+\mbox{\hyperlink{class_response_aae9cb792b6394320d15d6781f171376f}{Response}} (const long \mbox{\hyperlink{class_response_acf680961b814c9d3e63a68cc0befc0ce}{status\+Code}}, const std\+::map$<$ std\+::string, std\+::string $>$ \&\mbox{\hyperlink{class_response_a2a87bed3da61814117ce90d3dd5ca834}{headers}}, const std\+::string \&\mbox{\hyperlink{class_response_a2472c38e9a2d20b89b67c9db3836196d}{response\+Text}})
+\begin{DoxyCompactList}\small\item\em Constructs a new \doxylink{class_response}{Response} object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_response_a730dbcf91efdcd0255c517b246549d6d}{Response}} (long \mbox{\hyperlink{class_response_acf680961b814c9d3e63a68cc0befc0ce}{status\+Code}}, std\+::map$<$ std\+::string, std\+::string $>$ \&\&\mbox{\hyperlink{class_response_a2a87bed3da61814117ce90d3dd5ca834}{headers}}, std\+::string \&\&\mbox{\hyperlink{class_response_a2472c38e9a2d20b89b67c9db3836196d}{response\+Text}})
+\begin{DoxyCompactList}\small\item\em Constructs a new \doxylink{class_response}{Response} object. \end{DoxyCompactList}\item 
+const long \mbox{\hyperlink{class_response_acf680961b814c9d3e63a68cc0befc0ce}{status\+Code}} () const
+\begin{DoxyCompactList}\small\item\em Gets the status code of the HTTP response. \end{DoxyCompactList}\item 
+const std\+::map$<$ std\+::string, std\+::string $>$ \& \mbox{\hyperlink{class_response_a2a87bed3da61814117ce90d3dd5ca834}{headers}} () const
+\begin{DoxyCompactList}\small\item\em Gets the headers of the HTTP response. \end{DoxyCompactList}\item 
+const std\+::string \& \mbox{\hyperlink{class_response_a2472c38e9a2d20b89b67c9db3836196d}{response\+Text}} () const
+\begin{DoxyCompactList}\small\item\em Gets the body of the HTTP response. \end{DoxyCompactList}\item 
+const nlohmann\+::json \mbox{\hyperlink{class_response_a9dd2135de294340683f8d1afcdd1cfbc}{get\+Json\+Response}} () const
+\begin{DoxyCompactList}\small\item\em Gets the JSON representation of the HTTP response body. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Friends}
 \begin{DoxyCompactItemize}
 \item 
+std\+::ostream \& \mbox{\hyperlink{class_response_a0737244e63f166387972f11d844881d0}{operator$<$$<$}} (std\+::ostream \&os, const \mbox{\hyperlink{class_response}{Response}} \&response)
+\begin{DoxyCompactList}\small\item\em Outputs the HTTP response to an output stream. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A class representing an HTTP response. (Not neccisseraly JSON response, any textual response) 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_response_aae9cb792b6394320d15d6781f171376f}\label{class_response_aae9cb792b6394320d15d6781f171376f} 
+\index{Response@{Response}!Response@{Response}}
+\index{Response@{Response}!Response@{Response}}
+\doxysubsubsection{\texorpdfstring{Response()}{Response()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Response\+::\+Response (\begin{DoxyParamCaption}\item[{const long}]{status\+Code,  }\item[{const std\+::map$<$ std\+::string, std\+::string $>$ \&}]{headers,  }\item[{const std\+::string \&}]{response\+Text }\end{DoxyParamCaption})}
+
+
+
+Constructs a new \doxylink{class_response}{Response} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em status\+Code} & The status code of the HTTP response. \\
+\hline
+{\em headers} & The headers of the HTTP response. \\
+\hline
+{\em response\+Text} & The body of the HTTP response. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_response_a730dbcf91efdcd0255c517b246549d6d}\label{class_response_a730dbcf91efdcd0255c517b246549d6d} 
+\index{Response@{Response}!Response@{Response}}
+\index{Response@{Response}!Response@{Response}}
+\doxysubsubsection{\texorpdfstring{Response()}{Response()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Response\+::\+Response (\begin{DoxyParamCaption}\item[{long}]{status\+Code,  }\item[{std\+::map$<$ std\+::string, std\+::string $>$ \&\&}]{headers,  }\item[{std\+::string \&\&}]{response\+Text }\end{DoxyParamCaption})}
+
+
+
+Constructs a new \doxylink{class_response}{Response} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em status\+Code} & The status code of the HTTP response. \\
+\hline
+{\em headers} & The headers of the HTTP response (rvalue reference). \\
+\hline
+{\em response\+Text} & The body of the HTTP response (rvalue reference). \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_response_a9dd2135de294340683f8d1afcdd1cfbc}\label{class_response_a9dd2135de294340683f8d1afcdd1cfbc} 
+\index{Response@{Response}!getJsonResponse@{getJsonResponse}}
+\index{getJsonResponse@{getJsonResponse}!Response@{Response}}
+\doxysubsubsection{\texorpdfstring{getJsonResponse()}{getJsonResponse()}}
+{\footnotesize\ttfamily const nlohmann\+::json Response\+::get\+Json\+Response (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Gets the JSON representation of the HTTP response body. 
+
+\begin{DoxyReturn}{Returns}
+const nlohmann\+::json The JSON representation. 
+\end{DoxyReturn}
+\Hypertarget{class_response_a2a87bed3da61814117ce90d3dd5ca834}\label{class_response_a2a87bed3da61814117ce90d3dd5ca834} 
+\index{Response@{Response}!headers@{headers}}
+\index{headers@{headers}!Response@{Response}}
+\doxysubsubsection{\texorpdfstring{headers()}{headers()}}
+{\footnotesize\ttfamily const std\+::map$<$ std\+::string, std\+::string $>$ \& Response\+::headers (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets the headers of the HTTP response. 
+
+\begin{DoxyReturn}{Returns}
+const std\+::map$<$std\+::string, std\+::string$>$\& The headers.
+
+const std\+::map$<$std\+::string, std\+::string$>$\& The headers 
+\end{DoxyReturn}
+\Hypertarget{class_response_a2472c38e9a2d20b89b67c9db3836196d}\label{class_response_a2472c38e9a2d20b89b67c9db3836196d} 
+\index{Response@{Response}!responseText@{responseText}}
+\index{responseText@{responseText}!Response@{Response}}
+\doxysubsubsection{\texorpdfstring{responseText()}{responseText()}}
+{\footnotesize\ttfamily const std\+::string \& Response\+::response\+Text (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets the body of the HTTP response. 
+
+\begin{DoxyReturn}{Returns}
+const std\+::string\& The body.
+
+const std\+::string\& The body 
+\end{DoxyReturn}
+\Hypertarget{class_response_acf680961b814c9d3e63a68cc0befc0ce}\label{class_response_acf680961b814c9d3e63a68cc0befc0ce} 
+\index{Response@{Response}!statusCode@{statusCode}}
+\index{statusCode@{statusCode}!Response@{Response}}
+\doxysubsubsection{\texorpdfstring{statusCode()}{statusCode()}}
+{\footnotesize\ttfamily const long Response\+::status\+Code (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets the status code of the HTTP response. 
+
+\begin{DoxyReturn}{Returns}
+const long The status code. 
+\end{DoxyReturn}
+
+
+\doxysubsection{Friends And Related Symbol Documentation}
 \Hypertarget{class_response_a0737244e63f166387972f11d844881d0}\label{class_response_a0737244e63f166387972f11d844881d0} 
-std\+::ostream \& {\bfseries operator$<$$<$} (std\+::ostream \&os, const \mbox{\hyperlink{class_response}{Response}} \&response)
-\end{DoxyCompactItemize}
+\index{Response@{Response}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!Response@{Response}}
+\doxysubsubsection{\texorpdfstring{operator$<$$<$}{operator<<}}
+{\footnotesize\ttfamily std\+::ostream \& operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{os,  }\item[{const \mbox{\hyperlink{class_response}{Response}} \&}]{response }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Outputs the HTTP response to an output stream. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em os} & The output stream. \\
+\hline
+{\em response} & The \doxylink{class_response}{Response} object to output. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std\+::ostream\& The output stream. 
+\end{DoxyReturn}
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}

@@ -78,34 +78,263 @@ $(function() {
   <div class="headertitle"><div class="title">Response Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>A class representing an HTTP response. (Not neccisseraly JSON response, any textual response)  
+ <a href="#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="_response_8hpp_source.html">Response.hpp</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:aae9cb792b6394320d15d6781f171376f" id="r_aae9cb792b6394320d15d6781f171376f"><td class="memItemLeft" align="right" valign="top"><a id="aae9cb792b6394320d15d6781f171376f" name="aae9cb792b6394320d15d6781f171376f"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>Response</b> (const long statusCode, const std::map&lt; std::string, std::string &gt; &amp;headers, const std::string &amp;responseText)</td></tr>
+<tr class="memitem:aae9cb792b6394320d15d6781f171376f" id="r_aae9cb792b6394320d15d6781f171376f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aae9cb792b6394320d15d6781f171376f">Response</a> (const long <a class="el" href="#acf680961b814c9d3e63a68cc0befc0ce">statusCode</a>, const std::map&lt; std::string, std::string &gt; &amp;<a class="el" href="#a2a87bed3da61814117ce90d3dd5ca834">headers</a>, const std::string &amp;<a class="el" href="#a2472c38e9a2d20b89b67c9db3836196d">responseText</a>)</td></tr>
+<tr class="memdesc:aae9cb792b6394320d15d6781f171376f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a new <a class="el" href="class_response.html" title="A class representing an HTTP response. (Not neccisseraly JSON response, any textual response)">Response</a> object.  <br /></td></tr>
 <tr class="separator:aae9cb792b6394320d15d6781f171376f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a730dbcf91efdcd0255c517b246549d6d" id="r_a730dbcf91efdcd0255c517b246549d6d"><td class="memItemLeft" align="right" valign="top"><a id="a730dbcf91efdcd0255c517b246549d6d" name="a730dbcf91efdcd0255c517b246549d6d"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>Response</b> (long statusCode, std::map&lt; std::string, std::string &gt; &amp;&amp;headers, std::string &amp;&amp;responseText)</td></tr>
+<tr class="memitem:a730dbcf91efdcd0255c517b246549d6d" id="r_a730dbcf91efdcd0255c517b246549d6d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a730dbcf91efdcd0255c517b246549d6d">Response</a> (long <a class="el" href="#acf680961b814c9d3e63a68cc0befc0ce">statusCode</a>, std::map&lt; std::string, std::string &gt; &amp;&amp;<a class="el" href="#a2a87bed3da61814117ce90d3dd5ca834">headers</a>, std::string &amp;&amp;<a class="el" href="#a2472c38e9a2d20b89b67c9db3836196d">responseText</a>)</td></tr>
+<tr class="memdesc:a730dbcf91efdcd0255c517b246549d6d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a new <a class="el" href="class_response.html" title="A class representing an HTTP response. (Not neccisseraly JSON response, any textual response)">Response</a> object.  <br /></td></tr>
 <tr class="separator:a730dbcf91efdcd0255c517b246549d6d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acf680961b814c9d3e63a68cc0befc0ce" id="r_acf680961b814c9d3e63a68cc0befc0ce"><td class="memItemLeft" align="right" valign="top"><a id="acf680961b814c9d3e63a68cc0befc0ce" name="acf680961b814c9d3e63a68cc0befc0ce"></a>
-const long&#160;</td><td class="memItemRight" valign="bottom"><b>statusCode</b> () const</td></tr>
+<tr class="memitem:acf680961b814c9d3e63a68cc0befc0ce" id="r_acf680961b814c9d3e63a68cc0befc0ce"><td class="memItemLeft" align="right" valign="top">const long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acf680961b814c9d3e63a68cc0befc0ce">statusCode</a> () const</td></tr>
+<tr class="memdesc:acf680961b814c9d3e63a68cc0befc0ce"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the status code of the HTTP response.  <br /></td></tr>
 <tr class="separator:acf680961b814c9d3e63a68cc0befc0ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2a87bed3da61814117ce90d3dd5ca834" id="r_a2a87bed3da61814117ce90d3dd5ca834"><td class="memItemLeft" align="right" valign="top"><a id="a2a87bed3da61814117ce90d3dd5ca834" name="a2a87bed3da61814117ce90d3dd5ca834"></a>
-const std::map&lt; std::string, std::string &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>headers</b> () const</td></tr>
+<tr class="memitem:a2a87bed3da61814117ce90d3dd5ca834" id="r_a2a87bed3da61814117ce90d3dd5ca834"><td class="memItemLeft" align="right" valign="top">const std::map&lt; std::string, std::string &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2a87bed3da61814117ce90d3dd5ca834">headers</a> () const</td></tr>
+<tr class="memdesc:a2a87bed3da61814117ce90d3dd5ca834"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the headers of the HTTP response.  <br /></td></tr>
 <tr class="separator:a2a87bed3da61814117ce90d3dd5ca834"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2472c38e9a2d20b89b67c9db3836196d" id="r_a2472c38e9a2d20b89b67c9db3836196d"><td class="memItemLeft" align="right" valign="top"><a id="a2472c38e9a2d20b89b67c9db3836196d" name="a2472c38e9a2d20b89b67c9db3836196d"></a>
-const std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>responseText</b> () const</td></tr>
+<tr class="memitem:a2472c38e9a2d20b89b67c9db3836196d" id="r_a2472c38e9a2d20b89b67c9db3836196d"><td class="memItemLeft" align="right" valign="top">const std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2472c38e9a2d20b89b67c9db3836196d">responseText</a> () const</td></tr>
+<tr class="memdesc:a2472c38e9a2d20b89b67c9db3836196d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the body of the HTTP response.  <br /></td></tr>
 <tr class="separator:a2472c38e9a2d20b89b67c9db3836196d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9dd2135de294340683f8d1afcdd1cfbc" id="r_a9dd2135de294340683f8d1afcdd1cfbc"><td class="memItemLeft" align="right" valign="top"><a id="a9dd2135de294340683f8d1afcdd1cfbc" name="a9dd2135de294340683f8d1afcdd1cfbc"></a>
-const nlohmann::json&#160;</td><td class="memItemRight" valign="bottom"><b>getJsonResponse</b> () const</td></tr>
+<tr class="memitem:a9dd2135de294340683f8d1afcdd1cfbc" id="r_a9dd2135de294340683f8d1afcdd1cfbc"><td class="memItemLeft" align="right" valign="top">const nlohmann::json&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9dd2135de294340683f8d1afcdd1cfbc">getJsonResponse</a> () const</td></tr>
+<tr class="memdesc:a9dd2135de294340683f8d1afcdd1cfbc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the JSON representation of the HTTP response body.  <br /></td></tr>
 <tr class="separator:a9dd2135de294340683f8d1afcdd1cfbc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="friends" name="friends"></a>
 Friends</h2></td></tr>
-<tr class="memitem:a0737244e63f166387972f11d844881d0" id="r_a0737244e63f166387972f11d844881d0"><td class="memItemLeft" align="right" valign="top"><a id="a0737244e63f166387972f11d844881d0" name="a0737244e63f166387972f11d844881d0"></a>
-std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator&lt;&lt;</b> (std::ostream &amp;os, const <a class="el" href="class_response.html">Response</a> &amp;response)</td></tr>
+<tr class="memitem:a0737244e63f166387972f11d844881d0" id="r_a0737244e63f166387972f11d844881d0"><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0737244e63f166387972f11d844881d0">operator&lt;&lt;</a> (std::ostream &amp;os, const <a class="el" href="class_response.html">Response</a> &amp;response)</td></tr>
+<tr class="memdesc:a0737244e63f166387972f11d844881d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Outputs the HTTP response to an output stream.  <br /></td></tr>
 <tr class="separator:a0737244e63f166387972f11d844881d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>A class representing an HTTP response. (Not neccisseraly JSON response, any textual response) </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="aae9cb792b6394320d15d6781f171376f" name="aae9cb792b6394320d15d6781f171376f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aae9cb792b6394320d15d6781f171376f">&#9670;&#160;</a></span>Response() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Response::Response </td>
+          <td>(</td>
+          <td class="paramtype">const long</td>          <td class="paramname"><span class="paramname"><em>statusCode</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::map&lt; std::string, std::string &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>headers</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>responseText</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Constructs a new <a class="el" href="class_response.html" title="A class representing an HTTP response. (Not neccisseraly JSON response, any textual response)">Response</a> object. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">statusCode</td><td>The status code of the HTTP response. </td></tr>
+    <tr><td class="paramname">headers</td><td>The headers of the HTTP response. </td></tr>
+    <tr><td class="paramname">responseText</td><td>The body of the HTTP response. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a730dbcf91efdcd0255c517b246549d6d" name="a730dbcf91efdcd0255c517b246549d6d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a730dbcf91efdcd0255c517b246549d6d">&#9670;&#160;</a></span>Response() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Response::Response </td>
+          <td>(</td>
+          <td class="paramtype">long</td>          <td class="paramname"><span class="paramname"><em>statusCode</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::map&lt; std::string, std::string &gt; &amp;&amp;</td>          <td class="paramname"><span class="paramname"><em>headers</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string &amp;&amp;</td>          <td class="paramname"><span class="paramname"><em>responseText</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Constructs a new <a class="el" href="class_response.html" title="A class representing an HTTP response. (Not neccisseraly JSON response, any textual response)">Response</a> object. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">statusCode</td><td>The status code of the HTTP response. </td></tr>
+    <tr><td class="paramname">headers</td><td>The headers of the HTTP response (rvalue reference). </td></tr>
+    <tr><td class="paramname">responseText</td><td>The body of the HTTP response (rvalue reference). </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a9dd2135de294340683f8d1afcdd1cfbc" name="a9dd2135de294340683f8d1afcdd1cfbc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9dd2135de294340683f8d1afcdd1cfbc">&#9670;&#160;</a></span>getJsonResponse()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const nlohmann::json Response::getJsonResponse </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Gets the JSON representation of the HTTP response body. </p>
+<dl class="section return"><dt>Returns</dt><dd>const nlohmann::json The JSON representation. </dd></dl>
+
+</div>
+</div>
+<a id="a2a87bed3da61814117ce90d3dd5ca834" name="a2a87bed3da61814117ce90d3dd5ca834"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2a87bed3da61814117ce90d3dd5ca834">&#9670;&#160;</a></span>headers()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::map&lt; std::string, std::string &gt; &amp; Response::headers </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Gets the headers of the HTTP response. </p>
+<dl class="section return"><dt>Returns</dt><dd>const std::map&lt;std::string, std::string&gt;&amp; The headers.</dd>
+<dd>
+const std::map&lt;std::string, std::string&gt;&amp; The headers </dd></dl>
+
+</div>
+</div>
+<a id="a2472c38e9a2d20b89b67c9db3836196d" name="a2472c38e9a2d20b89b67c9db3836196d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2472c38e9a2d20b89b67c9db3836196d">&#9670;&#160;</a></span>responseText()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::string &amp; Response::responseText </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Gets the body of the HTTP response. </p>
+<dl class="section return"><dt>Returns</dt><dd>const std::string&amp; The body.</dd>
+<dd>
+const std::string&amp; The body </dd></dl>
+
+</div>
+</div>
+<a id="acf680961b814c9d3e63a68cc0befc0ce" name="acf680961b814c9d3e63a68cc0befc0ce"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acf680961b814c9d3e63a68cc0befc0ce">&#9670;&#160;</a></span>statusCode()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const long Response::statusCode </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Gets the status code of the HTTP response. </p>
+<dl class="section return"><dt>Returns</dt><dd>const long The status code. </dd></dl>
+
+</div>
+</div>
+<h2 class="groupheader">Friends And Related Symbol Documentation</h2>
+<a id="a0737244e63f166387972f11d844881d0" name="a0737244e63f166387972f11d844881d0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0737244e63f166387972f11d844881d0">&#9670;&#160;</a></span>operator&lt;&lt;</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::ostream &amp; operator&lt;&lt; </td>
+          <td>(</td>
+          <td class="paramtype">std::ostream &amp;</td>          <td class="paramname"><span class="paramname"><em>os</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="class_response.html">Response</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>response</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Outputs the HTTP response to an output stream. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">os</td><td>The output stream. </td></tr>
+    <tr><td class="paramname">response</td><td>The <a class="el" href="class_response.html" title="A class representing an HTTP response. (Not neccisseraly JSON response, any textual response)">Response</a> object to output. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>std::ostream&amp; The output stream. </dd></dl>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>/Users/tigran/Desktop/Classes/cpp/HttpClient/HttpClient/HttpClient/<a class="el" href="_response_8hpp_source.html">Response.hpp</a></li>
 <li>/Users/tigran/Desktop/Classes/cpp/HttpClient/HttpClient/HttpClient/<b>Response.cpp</b></li>

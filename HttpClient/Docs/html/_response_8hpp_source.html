@@ -98,38 +98,56 @@ $(function() { codefold.init(0); });
 <div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &lt;map&gt;</span></div>
 <div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &quot;json.hpp&quot;</span></div>
 <div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
-<div class="foldopen" id="foldopen00016" data-start="{" data-end="};">
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="class_response.html">   16</a></span><span class="keyword">class </span><a class="code hl_class" href="class_response.html">Response</a> {</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="keyword">private</span>:</div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    <span class="keywordtype">long</span> statusCode_;</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    std::map&lt;std::string, std::string&gt; headers_;</div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    std::string responseText_;</div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="keyword">public</span>:</div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    <a class="code hl_class" href="class_response.html">Response</a>(<span class="keyword">const</span> <span class="keywordtype">long</span> statusCode, <span class="keyword">const</span> std::map&lt;std::string, std::string&gt;&amp; headers, <span class="keyword">const</span> std::string&amp; responseText);</div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    <a class="code hl_class" href="class_response.html">Response</a>(<span class="keywordtype">long</span> statusCode, std::map&lt;std::string, std::string&gt;&amp;&amp; headers, std::string&amp;&amp; responseText);</div>
+<div class="foldopen" id="foldopen00019" data-start="{" data-end="};">
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="class_response.html">   19</a></span><span class="keyword">class </span><a class="code hl_class" href="class_response.html">Response</a> {</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    <span class="keywordtype">long</span> statusCode_; </div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    std::map&lt;std::string, std::string&gt; headers_; </div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    std::string responseText_; </div>
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    <span class="keyword">const</span> <span class="keywordtype">long</span> statusCode() <span class="keyword">const</span>;</div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    <span class="keyword">const</span> std::map&lt;std::string, std::string&gt;&amp; headers() <span class="keyword">const</span>;</div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    <span class="keyword">const</span> std::string&amp; responseText() <span class="keyword">const</span>;</div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    <span class="keyword">friend</span> std::ostream&amp; operator&lt;&lt;(std::ostream&amp; os, <span class="keyword">const</span> <a class="code hl_class" href="class_response.html">Response</a>&amp; response);</div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    <span class="keyword">const</span> nlohmann::json getJsonResponse() <span class="keyword">const</span>;</div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>};</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    <a class="code hl_function" href="class_response.html#aae9cb792b6394320d15d6781f171376f">Response</a>(<span class="keyword">const</span> <span class="keywordtype">long</span> <a class="code hl_function" href="class_response.html#acf680961b814c9d3e63a68cc0befc0ce">statusCode</a>, <span class="keyword">const</span> std::map&lt;std::string, std::string&gt;&amp; <a class="code hl_function" href="class_response.html#a2a87bed3da61814117ce90d3dd5ca834">headers</a>, <span class="keyword">const</span> std::string&amp; <a class="code hl_function" href="class_response.html#a2472c38e9a2d20b89b67c9db3836196d">responseText</a>);</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    <a class="code hl_function" href="class_response.html#aae9cb792b6394320d15d6781f171376f">Response</a>(<span class="keywordtype">long</span> <a class="code hl_function" href="class_response.html#acf680961b814c9d3e63a68cc0befc0ce">statusCode</a>, std::map&lt;std::string, std::string&gt;&amp;&amp; <a class="code hl_function" href="class_response.html#a2a87bed3da61814117ce90d3dd5ca834">headers</a>, std::string&amp;&amp; <a class="code hl_function" href="class_response.html#a2472c38e9a2d20b89b67c9db3836196d">responseText</a>);</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    <span class="keyword">const</span> <span class="keywordtype">long</span> <a class="code hl_function" href="class_response.html#acf680961b814c9d3e63a68cc0befc0ce">statusCode</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    <span class="keyword">const</span> std::map&lt;std::string, std::string&gt;&amp; <a class="code hl_function" href="class_response.html#a2a87bed3da61814117ce90d3dd5ca834">headers</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span> </div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    <span class="keyword">const</span> std::string&amp; <a class="code hl_function" href="class_response.html#a2472c38e9a2d20b89b67c9db3836196d">responseText</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span> </div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>    <span class="keyword">friend</span> std::ostream&amp; <a class="code hl_friend" href="class_response.html#a0737244e63f166387972f11d844881d0">operator&lt;&lt;</a>(std::ostream&amp; os, <span class="keyword">const</span> <a class="code hl_class" href="class_response.html">Response</a>&amp; response);</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span> </div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>    <span class="keyword">const</span> nlohmann::json <a class="code hl_function" href="class_response.html#a9dd2135de294340683f8d1afcdd1cfbc">getJsonResponse</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>};</div>
 </div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="keyword">inline</span> <span class="keyword">const</span> <span class="keywordtype">long</span> Response::statusCode()<span class="keyword"> const </span>{</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    <span class="keywordflow">return</span> statusCode_;</div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>}</div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="keyword">inline</span> <span class="keyword">const</span> std::map&lt;std::string, std::string&gt;&amp; Response::headers()<span class="keyword"> const </span>{</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    <span class="keywordflow">return</span> headers_;</div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>}</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span><span class="keyword">inline</span> <span class="keyword">const</span> std::string&amp; Response::responseText()<span class="keyword"> const </span>{</div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    <span class="keywordflow">return</span> responseText_;</div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>}</div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span><span class="preprocessor">#endif </span><span class="comment">/* Response_hpp */</span><span class="preprocessor"></span></div>
-<div class="ttc" id="aclass_response_html"><div class="ttname"><a href="class_response.html">Response</a></div><div class="ttdef"><b>Definition</b> Response.hpp:16</div></div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span> </div>
+<div class="foldopen" id="foldopen00087" data-start="{" data-end="}">
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno"><a class="line" href="class_response.html#acf680961b814c9d3e63a68cc0befc0ce">   87</a></span><span class="keyword">inline</span> <span class="keyword">const</span> <span class="keywordtype">long</span> <a class="code hl_function" href="class_response.html#acf680961b814c9d3e63a68cc0befc0ce">Response::statusCode</a>()<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>    <span class="keywordflow">return</span> statusCode_;</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>}</div>
+</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span> </div>
+<div class="foldopen" id="foldopen00096" data-start="{" data-end="}">
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno"><a class="line" href="class_response.html#a2a87bed3da61814117ce90d3dd5ca834">   96</a></span><span class="keyword">inline</span> <span class="keyword">const</span> std::map&lt;std::string, std::string&gt;&amp; <a class="code hl_function" href="class_response.html#a2a87bed3da61814117ce90d3dd5ca834">Response::headers</a>()<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>    <span class="keywordflow">return</span> headers_;</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>}</div>
+</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span> </div>
+<div class="foldopen" id="foldopen00105" data-start="{" data-end="}">
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno"><a class="line" href="class_response.html#a2472c38e9a2d20b89b67c9db3836196d">  105</a></span><span class="keyword">inline</span> <span class="keyword">const</span> std::string&amp; <a class="code hl_function" href="class_response.html#a2472c38e9a2d20b89b67c9db3836196d">Response::responseText</a>()<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>    <span class="keywordflow">return</span> responseText_;</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>}</div>
+</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span> </div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span><span class="preprocessor">#endif </span><span class="comment">/* Response_hpp */</span><span class="preprocessor"></span></div>
+<div class="ttc" id="aclass_response_html"><div class="ttname"><a href="class_response.html">Response</a></div><div class="ttdoc">A class representing an HTTP response. (Not neccisseraly JSON response, any textual response)</div><div class="ttdef"><b>Definition</b> Response.hpp:19</div></div>
+<div class="ttc" id="aclass_response_html_a0737244e63f166387972f11d844881d0"><div class="ttname"><a href="class_response.html#a0737244e63f166387972f11d844881d0">Response::operator&lt;&lt;</a></div><div class="ttdeci">friend std::ostream &amp; operator&lt;&lt;(std::ostream &amp;os, const Response &amp;response)</div><div class="ttdoc">Outputs the HTTP response to an output stream.</div><div class="ttdef"><b>Definition</b> Response.cpp:14</div></div>
+<div class="ttc" id="aclass_response_html_a2472c38e9a2d20b89b67c9db3836196d"><div class="ttname"><a href="class_response.html#a2472c38e9a2d20b89b67c9db3836196d">Response::responseText</a></div><div class="ttdeci">const std::string &amp; responseText() const</div><div class="ttdoc">Gets the body of the HTTP response.</div><div class="ttdef"><b>Definition</b> Response.hpp:105</div></div>
+<div class="ttc" id="aclass_response_html_a2a87bed3da61814117ce90d3dd5ca834"><div class="ttname"><a href="class_response.html#a2a87bed3da61814117ce90d3dd5ca834">Response::headers</a></div><div class="ttdeci">const std::map&lt; std::string, std::string &gt; &amp; headers() const</div><div class="ttdoc">Gets the headers of the HTTP response.</div><div class="ttdef"><b>Definition</b> Response.hpp:96</div></div>
+<div class="ttc" id="aclass_response_html_a9dd2135de294340683f8d1afcdd1cfbc"><div class="ttname"><a href="class_response.html#a9dd2135de294340683f8d1afcdd1cfbc">Response::getJsonResponse</a></div><div class="ttdeci">const nlohmann::json getJsonResponse() const</div><div class="ttdoc">Gets the JSON representation of the HTTP response body.</div><div class="ttdef"><b>Definition</b> Response.cpp:24</div></div>
+<div class="ttc" id="aclass_response_html_aae9cb792b6394320d15d6781f171376f"><div class="ttname"><a href="class_response.html#aae9cb792b6394320d15d6781f171376f">Response::Response</a></div><div class="ttdeci">Response(const long statusCode, const std::map&lt; std::string, std::string &gt; &amp;headers, const std::string &amp;responseText)</div><div class="ttdoc">Constructs a new Response object.</div><div class="ttdef"><b>Definition</b> Response.cpp:10</div></div>
+<div class="ttc" id="aclass_response_html_acf680961b814c9d3e63a68cc0befc0ce"><div class="ttname"><a href="class_response.html#acf680961b814c9d3e63a68cc0befc0ce">Response::statusCode</a></div><div class="ttdeci">const long statusCode() const</div><div class="ttdoc">Gets the status code of the HTTP response.</div><div class="ttdef"><b>Definition</b> Response.hpp:87</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
