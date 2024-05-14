@@ -6,18 +6,17 @@
 //
 
 #include "HttpClient.hpp"
+#include "Response.hpp"
 #include <curl/curl.h>
 
 
 Response HttpClient::Request(const std::string& url, const std::vector<std::string>& headers, HTTPMethod requestMethod)
 {
-    std::string& response = performRequest(url, headers);
-    std::cout << response << std::endl;
-    return Response(201, "headers", "someText");
+    return performRequest(url, headers);
 }
 
 
-std::string& HttpClient::performRequest(const std::string& url, const std::vector<std::string>& headers, const char* postData)
+Response HttpClient::performRequest(const std::string& url, const std::vector<std::string>& headers, const char* postData)
 {
     CURL* curl;
     CURLcode res;
@@ -57,13 +56,8 @@ std::string& HttpClient::performRequest(const std::string& url, const std::vecto
     
     std::cout << "ASD STATUS CODE: " << statusCode << "ASD HEADER RESPONSE: " << responseHeader << std::endl;
 
-    return readBuffer;
+    return Response(statusCode, responseHeader, readBuffer);
 }
-
-//size_t HttpClient::HeaderCallback(void* contents, size_t size, size_t nmemb, void* userp) {
-//    ((std::string*)userp)->append((char*)contents, size * nmemb);
-//    return size * nmemb;
-//}
 
 size_t HttpClient::WriteCallback(void* contents, size_t size, size_t nmemb, void* userp) {
     ((std::string*)userp)->append((char*)contents, size * nmemb);

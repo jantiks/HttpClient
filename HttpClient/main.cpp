@@ -10,7 +10,8 @@
 
 int main(int argc, const char * argv[]) {
     // insert code here...
-    HttpClient::Request("example.com", {}, HTTPMethod::GET);
-    std::cout << "Hello, World!\n";
+    const Response response = HttpClient::Request("example.com", {}, HTTPMethod::GET);
+    std::cout << response.statusCode() << std::endl;
+    std::cout << response.headers() << std::endl;
     return 0;
 }
