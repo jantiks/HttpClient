@@ -20,3 +20,8 @@ std::ostream& operator<<(std::ostream& os, const Response& response) {
     os << "Response Text: " << response.responseText();
     return os;
 }
+
+const nlohmann::json Response::getJsonResponse() const {
+    nlohmann::json jsonData = nlohmann::json::parse(responseText_);
+    return jsonData;
+}

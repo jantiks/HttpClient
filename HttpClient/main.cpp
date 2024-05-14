@@ -10,7 +10,7 @@
 
 int main(int argc, const char * argv[]) {
     // insert code here...
-    const Response response = HttpClient::Request("example.com", {}, HTTPMethod::GET);
-    std::cout << response << std::endl;
+    const Response response = HttpClient::Request("https://jsonplaceholder.typicode.com/posts/1", {"Content-Type: application/json"}, HTTPMethod::GET);
+    std::cout << response.getJsonResponse() << std::endl;
     return 0;
 }

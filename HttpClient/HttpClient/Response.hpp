@@ -11,6 +11,7 @@
 #include <stdio.h>
 #include <iostream>
 #include <map>
+#include "json.hpp"
 
 class Response {
 private:
@@ -26,6 +27,7 @@ public:
     const std::string& responseText() const;
 
     friend std::ostream& operator<<(std::ostream& os, const Response& response);
+    const nlohmann::json getJsonResponse() const;
 };
 
 inline const long Response::statusCode() const {
