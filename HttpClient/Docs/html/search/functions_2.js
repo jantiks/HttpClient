@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['getjsonresponse_0',['getJsonResponse',['../class_response.html#a9dd2135de294340683f8d1afcdd1cfbc',1,'Response']]]
+  ['headers_0',['headers',['../class_response.html#a2a87bed3da61814117ce90d3dd5ca834',1,'Response']]]
 ];

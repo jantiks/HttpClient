@@ -2,14 +2,13 @@
 
 ## Overview
 
-This project is a C++ HTTP client library designed to make HTTP requests. The client supports basic HTTP methods like GET, POST, PUT, and DELETE, making it suitable for a wide range of HTTP-based applications.
+C++ HTTP client library designed to make HTTP requests. The client supports basic HTTP methods like GET, POST, PUT, and DELETE
 
 ## Features
 
 - **HTTP Methods**: Supports GET, POST, PUT, and DELETE methods.
 - **Custom Headers**: Allows setting custom HTTP headers.
 - **JSON Handling**: Decodes JSON responses using the nlohmann::json library.
-- **Error Handling**: Throws exceptions on failed HTTP requests.
 
 ## Dependencies
 

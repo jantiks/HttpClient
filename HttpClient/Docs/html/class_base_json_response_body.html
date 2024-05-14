@@ -83,15 +83,18 @@ $(function() {
  <a href="#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="_base_json_response_body_8hpp_source.html">BaseJsonResponseBody.hpp</a>&gt;</code></p>
+<div class="dynheader">
+Inheritance diagram for BaseJsonResponseBody:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="class_base_json_response_body.png" usemap="#BaseJsonResponseBody_map" alt=""/>
+  <map id="BaseJsonResponseBody_map" name="BaseJsonResponseBody_map">
+<area href="class_my_json_response_body.html" alt="MyJsonResponseBody" shape="rect" coords="0,56,151,80"/>
+  </map>
+</div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a544b705b9dd307bb3d24edc8ac42b1c4" id="r_a544b705b9dd307bb3d24edc8ac42b1c4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a544b705b9dd307bb3d24edc8ac42b1c4">BaseJsonResponseBody</a> (const long statusCode, const std::map&lt; std::string, std::string &gt; &amp;headers)</td></tr>
-<tr class="memdesc:a544b705b9dd307bb3d24edc8ac42b1c4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a new <a class="el" href="class_base_json_response_body.html" title="A base class for handling JSON response bodies.">BaseJsonResponseBody</a> object.  <br /></td></tr>
-<tr class="separator:a544b705b9dd307bb3d24edc8ac42b1c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a72cfe423721e8a9441f46de721279b12" id="r_a72cfe423721e8a9441f46de721279b12"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a72cfe423721e8a9441f46de721279b12">BaseJsonResponseBody</a> (long statusCode, std::map&lt; std::string, std::string &gt; &amp;&amp;headers)</td></tr>
-<tr class="memdesc:a72cfe423721e8a9441f46de721279b12"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a new <a class="el" href="class_base_json_response_body.html" title="A base class for handling JSON response bodies.">BaseJsonResponseBody</a> object.  <br /></td></tr>
-<tr class="separator:a72cfe423721e8a9441f46de721279b12"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abc55858a1d3ed2807d0874aaa926fcaf" id="r_abc55858a1d3ed2807d0874aaa926fcaf"><td class="memItemLeft" align="right" valign="top"><a id="abc55858a1d3ed2807d0874aaa926fcaf" name="abc55858a1d3ed2807d0874aaa926fcaf"></a>
 virtual&#160;</td><td class="memItemRight" valign="bottom"><b>~BaseJsonResponseBody</b> ()=default</td></tr>
 <tr class="memdesc:abc55858a1d3ed2807d0874aaa926fcaf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Virtual destructor. <br /></td></tr>
@@ -99,6 +102,12 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><b>~BaseJsonResponseB
 <tr class="memitem:ac23cf4b2fd652264fe8769d4b53296a6" id="r_ac23cf4b2fd652264fe8769d4b53296a6"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac23cf4b2fd652264fe8769d4b53296a6">decode</a> (const nlohmann::json &amp;json)=0</td></tr>
 <tr class="memdesc:ac23cf4b2fd652264fe8769d4b53296a6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Decodes the JSON response.  <br /></td></tr>
 <tr class="separator:ac23cf4b2fd652264fe8769d4b53296a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad3b59d9956c08ef0092869a7e4e45f3c" id="r_ad3b59d9956c08ef0092869a7e4e45f3c"><td class="memItemLeft" align="right" valign="top"><a id="ad3b59d9956c08ef0092869a7e4e45f3c" name="ad3b59d9956c08ef0092869a7e4e45f3c"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setStatusCode</b> (long statusCode)</td></tr>
+<tr class="separator:ad3b59d9956c08ef0092869a7e4e45f3c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa79f9cb10ac62f8d0f6c85547a6a1360" id="r_aa79f9cb10ac62f8d0f6c85547a6a1360"><td class="memItemLeft" align="right" valign="top"><a id="aa79f9cb10ac62f8d0f6c85547a6a1360" name="aa79f9cb10ac62f8d0f6c85547a6a1360"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setHeaders</b> (const std::map&lt; std::string, std::string &gt; &amp;headers)</td></tr>
+<tr class="separator:aa79f9cb10ac62f8d0f6c85547a6a1360"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
@@ -113,84 +122,7 @@ std::map&lt; std::string, std::string &gt;&#160;</td><td class="memItemRight" va
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>A base class for handling JSON response bodies. </p>
-</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a544b705b9dd307bb3d24edc8ac42b1c4" name="a544b705b9dd307bb3d24edc8ac42b1c4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a544b705b9dd307bb3d24edc8ac42b1c4">&#9670;&#160;</a></span>BaseJsonResponseBody() <span class="overload">[1/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">BaseJsonResponseBody::BaseJsonResponseBody </td>
-          <td>(</td>
-          <td class="paramtype">const long</td>          <td class="paramname"><span class="paramname"><em>statusCode</em>, </span></td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const std::map&lt; std::string, std::string &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>headers</em></span>&#160;)</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Constructs a new <a class="el" href="class_base_json_response_body.html" title="A base class for handling JSON response bodies.">BaseJsonResponseBody</a> object. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">statusCode</td><td>The status code of the HTTP response. </td></tr>
-    <tr><td class="paramname">headers</td><td>The headers of the HTTP response. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a id="a72cfe423721e8a9441f46de721279b12" name="a72cfe423721e8a9441f46de721279b12"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a72cfe423721e8a9441f46de721279b12">&#9670;&#160;</a></span>BaseJsonResponseBody() <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">BaseJsonResponseBody::BaseJsonResponseBody </td>
-          <td>(</td>
-          <td class="paramtype">long</td>          <td class="paramname"><span class="paramname"><em>statusCode</em>, </span></td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">std::map&lt; std::string, std::string &gt; &amp;&amp;</td>          <td class="paramname"><span class="paramname"><em>headers</em></span>&#160;)</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Constructs a new <a class="el" href="class_base_json_response_body.html" title="A base class for handling JSON response bodies.">BaseJsonResponseBody</a> object. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">statusCode</td><td>The status code of the HTTP response. </td></tr>
-    <tr><td class="paramname">headers</td><td>The headers of the HTTP response (rvalue reference). </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<h2 class="groupheader">Member Function Documentation</h2>
+</div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="ac23cf4b2fd652264fe8769d4b53296a6" name="ac23cf4b2fd652264fe8769d4b53296a6"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ac23cf4b2fd652264fe8769d4b53296a6">&#9670;&#160;</a></span>decode()</h2>
 
@@ -221,6 +153,8 @@ std::map&lt; std::string, std::string &gt;&#160;</td><td class="memItemRight" va
   </table>
   </dd>
 </dl>
+
+<p>Implemented in <a class="el" href="class_my_json_response_body.html#a8ca44bb7ff20f05c7fe4f29e62273d6c">MyJsonResponseBody</a>.</p>
 
 </div>
 </div>
