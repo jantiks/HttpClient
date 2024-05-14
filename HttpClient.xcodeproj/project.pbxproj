@@ -33,6 +33,22 @@
 		989A91532BF3320F007D4288 /* HttpClient.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = HttpClient.hpp; sourceTree = "<group>"; };
 		989A91552BF332C7007D4288 /* Response.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Response.cpp; sourceTree = "<group>"; };
 		989A91562BF332C7007D4288 /* Response.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Response.hpp; sourceTree = "<group>"; };
+		989A91B82BF35CD4007D4288 /* reader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = reader.h; sourceTree = "<group>"; };
+		989A91B92BF35CD4007D4288 /* version.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = version.h; sourceTree = "<group>"; };
+		989A91BA2BF35CD4007D4288 /* assertions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = assertions.h; sourceTree = "<group>"; };
+		989A91BB2BF35CD4007D4288 /* config.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = config.h; sourceTree = "<group>"; };
+		989A91BC2BF35CD4007D4288 /* value.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = value.h; sourceTree = "<group>"; };
+		989A91BD2BF35CD4007D4288 /* allocator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = allocator.h; sourceTree = "<group>"; };
+		989A91BE2BF35CD4007D4288 /* json.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = json.h; sourceTree = "<group>"; };
+		989A91BF2BF35CD4007D4288 /* writer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = writer.h; sourceTree = "<group>"; };
+		989A91C02BF35CD4007D4288 /* json_features.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = json_features.h; sourceTree = "<group>"; };
+		989A91C12BF35CD4007D4288 /* forwards.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = forwards.h; sourceTree = "<group>"; };
+		989A91C32BF35CDF007D4288 /* json_writer.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = json_writer.cpp; sourceTree = "<group>"; };
+		989A91C42BF35CDF007D4288 /* CMakeLists.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = CMakeLists.txt; sourceTree = "<group>"; };
+		989A91C52BF35CDF007D4288 /* json_reader.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = json_reader.cpp; sourceTree = "<group>"; };
+		989A91C62BF35CDF007D4288 /* json_tool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = json_tool.h; sourceTree = "<group>"; };
+		989A91C72BF35CDF007D4288 /* json_value.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = json_value.cpp; sourceTree = "<group>"; };
+		989A91C82BF35CDF007D4288 /* json_valueiterator.inl */ = {isa = PBXFileReference; lastKnownFileType = text; path = json_valueiterator.inl; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +83,7 @@
 		989A91432BF32C0B007D4288 /* HttpClient */ = {
 			isa = PBXGroup;
 			children = (
+				989A91B62BF35CA8007D4288 /* jsoncpp */,
 				989A91442BF32C0B007D4288 /* main.cpp */,
 				989A914E2BF3307F007D4288 /* HttpClient */,
 			);
@@ -90,6 +107,45 @@
 				989A91502BF331D2007D4288 /* libcurl.tbd */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		989A91B62BF35CA8007D4288 /* jsoncpp */ = {
+			isa = PBXGroup;
+			children = (
+				989A91C22BF35CDF007D4288 /* lib_json */,
+				989A91B72BF35CD4007D4288 /* json */,
+			);
+			path = jsoncpp;
+			sourceTree = "<group>";
+		};
+		989A91B72BF35CD4007D4288 /* json */ = {
+			isa = PBXGroup;
+			children = (
+				989A91B82BF35CD4007D4288 /* reader.h */,
+				989A91B92BF35CD4007D4288 /* version.h */,
+				989A91BA2BF35CD4007D4288 /* assertions.h */,
+				989A91BB2BF35CD4007D4288 /* config.h */,
+				989A91BC2BF35CD4007D4288 /* value.h */,
+				989A91BD2BF35CD4007D4288 /* allocator.h */,
+				989A91BE2BF35CD4007D4288 /* json.h */,
+				989A91BF2BF35CD4007D4288 /* writer.h */,
+				989A91C02BF35CD4007D4288 /* json_features.h */,
+				989A91C12BF35CD4007D4288 /* forwards.h */,
+			);
+			path = json;
+			sourceTree = "<group>";
+		};
+		989A91C22BF35CDF007D4288 /* lib_json */ = {
+			isa = PBXGroup;
+			children = (
+				989A91C32BF35CDF007D4288 /* json_writer.cpp */,
+				989A91C42BF35CDF007D4288 /* CMakeLists.txt */,
+				989A91C52BF35CDF007D4288 /* json_reader.cpp */,
+				989A91C62BF35CDF007D4288 /* json_tool.h */,
+				989A91C72BF35CDF007D4288 /* json_value.cpp */,
+				989A91C82BF35CDF007D4288 /* json_valueiterator.inl */,
+			);
+			path = lib_json;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
