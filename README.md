@@ -160,6 +160,7 @@ int main() {
 
     try {
         HttpClient::Request("http://example.com/api", headers, HTTPMethod::GET, responseBody);
+        std::cout << "GET Response: \n" << responseBody.myPropery << std::endl;
     } catch (const std::runtime_error& e) {
         std::cerr << "HTTP request failed: " << e.what() << std::endl;
     }

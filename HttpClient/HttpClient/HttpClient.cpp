@@ -34,6 +34,8 @@ Response HttpClient::Request(const std::string& url, const std::vector<std::stri
  */
 void HttpClient::Request(const std::string& url, const std::vector<std::string>& headers, HTTPMethod requestMethod, BaseJsonResponseBody& responseBody, const std::string& requestBody) {
     Response response = performRequest(url, headers, requestMethod, requestBody.c_str());
+    responseBody.setHeaders(response.headers());
+    responseBody.setStatusCode(response.statusCode());
     responseBody.decode(response.getJsonResponse());
 }
 

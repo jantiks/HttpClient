@@ -15,7 +15,7 @@ public:
         : BaseJsonResponseBody() {}
 
     void decode(const nlohmann::json& json) override {
-        myPropery = json["myPropertyKey"];
+        myPropery = json["body"];
     }
 };
 
@@ -38,8 +38,8 @@ void testPostRequest() {
 
     try {
         MyJsonResponseBody responseBody;
-        Response response = HttpClient::Request(url, headers, HTTPMethod::POST, requestBody);
-        std::cout << "POST Response: \n" << response.getJsonResponse() << std::endl;
+        HttpClient::Request(url, headers, HTTPMethod::POST, responseBody, requestBody);
+        std::cout << "POST Response: \n" << responseBody.myPropery << std::endl;
     } catch (const std::exception& e) {
         std::cerr << "POST request failed: " << e.what() << std::endl;
     }

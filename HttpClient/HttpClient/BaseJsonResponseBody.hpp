@@ -34,6 +34,14 @@ public:
      * @param json The JSON object to decode.
      */
     virtual void decode (const nlohmann::json& json) = 0;
+
+    void setStatusCode(long statusCode) {
+        statusCode_ = statusCode;
+    }
+
+    void setHeaders(const std::map<std::string, std::string>& headers) {
+        headers_ = headers;
+    }
 };
 
 #endif /* BaseHttpResponseBody_hpp */
