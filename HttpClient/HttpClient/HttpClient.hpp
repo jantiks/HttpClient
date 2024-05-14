@@ -10,10 +10,15 @@
 
 #include <stdio.h>
 #include "iostream"
+#include "Response.hpp"
+
 enum class HTTPMethod { GET, POST };
 
 class HttpClient {
 public:
-    static void Request(std::string& url, HTTPMethod requestMethod);
+    static Response Request(const std::string& url, const std::vector<std::string>& headers, HTTPMethod requestMethod);
+private:
+    static size_t WriteCallback(void* contents, size_t size, size_t nmemb, void* userp);
+    static std::string& performRequest(const std::string& url, const std::vector<std::string>& headers, const char* postData = nullptr);
 };
 #endif /* HttpClient_hpp */
