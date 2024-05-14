@@ -21,6 +21,6 @@ public:
     BaseJsonResponseBody(long statusCode, std::map<std::string, std::string>&& headers)
          : statusCode_(statusCode), headers_(std::move(headers)) {}
     virtual ~BaseJsonResponseBody() = default;
-    virtual void encode (const nlohmann::json& json) = 0;
+    virtual void decode (const nlohmann::json& json) = 0;
 };
 #endif /* BaseHttpResponseBody_hpp */

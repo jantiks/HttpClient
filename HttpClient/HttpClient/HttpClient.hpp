@@ -14,7 +14,7 @@
 #include "Response.hpp"
 #include "BaseJsonResponseBody.hpp"
 
-enum class HTTPMethod { GET, POST };
+enum class HTTPMethod { GET, POST, PUT, DELETE };
 
 class HttpClient {
 public:
@@ -22,7 +22,7 @@ public:
     static void Request(const std::string& url, const std::vector<std::string>& headers, HTTPMethod requestMethod, BaseJsonResponseBody& responseBody);
 private:
     static size_t WriteCallback(void* contents, size_t size, size_t nmemb, void* userp);
-    static Response performRequest(const std::string& url, const std::vector<std::string>& headers, const char* postData = nullptr);
+    static Response performRequest(const std::string& url, const std::vector<std::string>& headers, HTTPMethod requestMethod, const char* postData = nullptr);
     static std::map<std::string, std::string> parseHeaders(const std::string& fromString);
 };
 #endif /* HttpClient_hpp */

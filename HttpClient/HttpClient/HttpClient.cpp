@@ -12,15 +12,15 @@
 
 
 Response HttpClient::Request(const std::string& url, const std::vector<std::string>& headers, HTTPMethod requestMethod) {
-    return performRequest(url, headers);
+    return performRequest(url, headers, requestMethod);
 }
 
 void HttpClient::Request(const std::string& url, const std::vector<std::string>& headers, HTTPMethod requestMethod, BaseJsonResponseBody& responseBody) {
-    Response response = performRequest(url, headers);
-    responseBody.encode(response.getJsonResponse());
+    Response response = performRequest(url, headers, requestMethod);
+    responseBody.decode(response.getJsonResponse());
 }
 
-Response HttpClient::performRequest(const std::string& url, const std::vector<std::string>& headers, const char* postData) {
+Response HttpClient::performRequest(const std::string& url, const std::vector<std::string>& headers, HTTPMethod requestMethod, const char* postData) {
     CURL* curl;
     CURLcode res;
     std::string readBuffer;
@@ -41,9 +41,24 @@ Response HttpClient::performRequest(const std::string& url, const std::vector<st
         curl_easy_setopt(curl, CURLOPT_HEADERFUNCTION, WriteCallback);
         curl_easy_setopt(curl, CURLOPT_HEADERDATA, &responseHeader);
 
-        if(postData) {
-            curl_easy_setopt(curl, CURLOPT_POST, 1L);
-            curl_easy_setopt(curl, CURLOPT_POSTFIELDS, postData);
+        switch(requestMethod) {
+            case HTTPMethod::GET:
+                break;
+            case HTTPMethod::POST:
+                if (postData) {
+                    curl_easy_setopt(curl, CURLOPT_POST, 1L);
+                    curl_easy_setopt(curl, CURLOPT_POSTFIELDS, postData);
+                }
+                break;
+            case HTTPMethod::PUT:
+                curl_easy_setopt(curl, CURLOPT_CUSTOMREQUEST, "PUT");
+                if (postData) {
+                    curl_easy_setopt(curl, CURLOPT_POSTFIELDS, postData);
+                }
+                break;
+            case HTTPMethod::DELETE:
+                curl_easy_setopt(curl, CURLOPT_CUSTOMREQUEST, "DELETE");
+                break;
         }
 
         res = curl_easy_perform(curl);
@@ -59,7 +74,7 @@ Response HttpClient::performRequest(const std::string& url, const std::vector<st
         curl_slist_free_all(curlHeaders);
         curl_easy_cleanup(curl);
     }
-    
+
     return Response(statusCode, parseHeaders(responseHeader), readBuffer);
 }
 

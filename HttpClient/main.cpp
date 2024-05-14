@@ -8,9 +8,13 @@
 #include <iostream>
 #include "HttpClient.hpp"
 
+
+
 int main(int argc, const char * argv[]) {
     // insert code here...
-    const Response response = HttpClient::Request("https://jsonplaceholder.typicode.com/posts/1", {"Content-Type: application/json"}, HTTPMethod::GET);
-    std::cout << response.getJsonResponse() << std::endl;
+    std::cout << "ASD STARTED" << std::endl;
+    Response postResponse = HttpClient::Request("https://jsonplaceholder.typicode.com/posts", {"Content-Type: application/json"}, HTTPMethod::POST);
+    std::cout << postResponse.getJsonResponse() << std::endl;
+    std::cout << "ASD ENDED" << std::endl;
     return 0;
 }
