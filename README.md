@@ -76,27 +76,24 @@ C++ HTTP client library designed to make HTTP requests. The client supports basi
 - `Response(const long statusCode, const std::map<std::string, std::string>& headers, const std::string& responseText)`
   - Constructs a new `Response` object.
   - Parameters:
-    - `statusCode`: The status code of the HTTP response.
-    - `headers`: The headers of the HTTP response.
-    - `responseText`: The body of the HTTP response.
+    - `statusCode`:
+    - `headers`: (lvalue referance)
+    - `responseText`: (lvalue referance)
 
 - `Response(long statusCode, std::map<std::string, std::string>&& headers, std::string&& responseText)`
   - Constructs a new `Response` object.
   - Parameters:
-    - `statusCode`: The status code of the HTTP response.
+    - `statusCode`:
     - `headers`: The headers of the HTTP response (rvalue reference).
     - `responseText`: The body of the HTTP response (rvalue reference).
 
 - `const long statusCode() const`
-  - Gets the status code of the HTTP response.
   - Returns: The status code.
 
 - `const std::map<std::string, std::string>& headers() const`
-  - Gets the headers of the HTTP response.
   - Returns: The headers.
 
 - `const std::string& responseText() const`
-  - Gets the body of the HTTP response.
   - Returns: The body.
 
 - `friend std::ostream& operator<<(std::ostream& os, const Response& response)`
@@ -116,14 +113,14 @@ C++ HTTP client library designed to make HTTP requests. The client supports basi
 - `BaseJsonResponseBody(const long statusCode, const std::map<std::string, std::string>& headers)`
   - Constructs a new `BaseJsonResponseBody` object.
   - Parameters:
-    - `statusCode`: The status code of the HTTP response.
-    - `headers`: The headers of the HTTP response.
+    - `statusCode`:
+    - `headers`: (lvalue referance)
 
 - `BaseJsonResponseBody(long statusCode, std::map<std::string, std::string>&& headers)`
   - Constructs a new `BaseJsonResponseBody` object.
   - Parameters:
-    - `statusCode`: The status code of the HTTP response.
-    - `headers`: The headers of the HTTP response (rvalue reference).
+    - `statusCode`:
+    - `headers`:  (rvalue reference).
 
 - `virtual ~BaseJsonResponseBody() = default`
   - Virtual destructor.
@@ -149,20 +146,38 @@ public:
         : BaseJsonResponseBody() {}
 
     void decode(const nlohmann::json& json) override {
-        myPropery = json["myPropertyKey"];
+        myPropery = json["body"];
     }
 };
 
-int main() {
+void testGetRequest() {
     std::vector<std::string> headers = { "Content-Type: application/json" };
-    MyJsonResponseBody responseBody;
+    std::string url = "https://jsonplaceholder.typicode.com/posts/1";
 
     try {
-        HttpClient::Request("http://example.com/api", headers, HTTPMethod::GET, responseBody);
-        std::cout << "GET Response: \n" << responseBody.myPropery << std::endl;
-    } catch (const std::runtime_error& e) {
-        std::cerr << "HTTP request failed: " << e.what() << std::endl;
+        Response response = HttpClient::Request(url, headers, HTTPMethod::GET);
+        std::cout << "GET Response: \n" << response.getJsonResponse() << std::endl;
+    } catch (const std::exception& e) {
+        std::cerr << "GET request failed: " << e.what() << std::endl;
     }
+}
 
+void testPostRequest() {
+    std::vector<std::string> headers = { "Content-Type: application/json" };
+    std::string url = "https://jsonplaceholder.typicode.com/posts";
+    std::string requestBody = R"({"title": "foo", "body": "bar", "userId": 1})";
+
+    try {
+        MyJsonResponseBody responseBody;
+        HttpClient::Request(url, headers, HTTPMethod::POST, responseBody, requestBody);
+        std::cout << "POST Response: \n" << responseBody.myPropery << std::endl;
+    } catch (const std::exception& e) {
+        std::cerr << "POST request failed: " << e.what() << std::endl;
+    }
+}
+
+int main(int argc, const char * argv[]) {
+    testGetRequest();
+    testPostRequest()
     return 0;
 }

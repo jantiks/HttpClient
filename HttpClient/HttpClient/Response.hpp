@@ -18,26 +18,26 @@
  */
 class Response {
 private:
-    long statusCode_; ///< The status code of the HTTP response.
-    std::map<std::string, std::string> headers_; ///< The headers of the HTTP response.
-    std::string responseText_; ///< The body of the HTTP response.
+    long statusCode_;
+    std::map<std::string, std::string> headers_;
+    std::string responseText_;
 
 public:
     /**
      * @brief Constructs a new Response object.
      *
-     * @param statusCode The status code of the HTTP response.
-     * @param headers The headers of the HTTP response.
-     * @param responseText The body of the HTTP response.
+     * @param statusCode
+     * @param headers
+     * @param responseText
      */
     Response(const long statusCode, const std::map<std::string, std::string>& headers, const std::string& responseText);
 
     /**
      * @brief Constructs a new Response object.
      *
-     * @param statusCode The status code of the HTTP response.
-     * @param headers The headers of the HTTP response (rvalue reference).
-     * @param responseText The body of the HTTP response (rvalue reference).
+     * @param statusCode
+     * @param headers
+     * @param responseText
      */
     Response(long statusCode, std::map<std::string, std::string>&& headers, std::string&& responseText);
 
