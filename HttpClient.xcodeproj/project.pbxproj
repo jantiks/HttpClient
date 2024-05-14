@@ -11,7 +11,7 @@
 		989A91512BF331D2007D4288 /* libcurl.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 989A91502BF331D2007D4288 /* libcurl.tbd */; };
 		989A91542BF3320F007D4288 /* HttpClient.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 989A91522BF3320F007D4288 /* HttpClient.cpp */; };
 		989A91572BF332C7007D4288 /* Response.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 989A91552BF332C7007D4288 /* Response.cpp */; };
-		989A91D22BF3969D007D4288 /* BaseHttpResponseBody.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 989A91D02BF3969D007D4288 /* BaseHttpResponseBody.cpp */; };
+		989A91D22BF3969D007D4288 /* BaseJsonResponseBody.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 989A91D02BF3969D007D4288 /* BaseJsonResponseBody.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -35,8 +35,8 @@
 		989A91552BF332C7007D4288 /* Response.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Response.cpp; sourceTree = "<group>"; };
 		989A91562BF332C7007D4288 /* Response.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Response.hpp; sourceTree = "<group>"; };
 		989A91CC2BF360AC007D4288 /* json.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = json.hpp; sourceTree = "<group>"; };
-		989A91D02BF3969D007D4288 /* BaseHttpResponseBody.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = BaseHttpResponseBody.cpp; sourceTree = "<group>"; };
-		989A91D12BF3969D007D4288 /* BaseHttpResponseBody.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = BaseHttpResponseBody.hpp; sourceTree = "<group>"; };
+		989A91D02BF3969D007D4288 /* BaseJsonResponseBody.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = BaseJsonResponseBody.cpp; sourceTree = "<group>"; };
+		989A91D12BF3969D007D4288 /* BaseJsonResponseBody.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = BaseJsonResponseBody.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,8 +85,8 @@
 				989A91532BF3320F007D4288 /* HttpClient.hpp */,
 				989A91552BF332C7007D4288 /* Response.cpp */,
 				989A91562BF332C7007D4288 /* Response.hpp */,
-				989A91D02BF3969D007D4288 /* BaseHttpResponseBody.cpp */,
-				989A91D12BF3969D007D4288 /* BaseHttpResponseBody.hpp */,
+				989A91D02BF3969D007D4288 /* BaseJsonResponseBody.cpp */,
+				989A91D12BF3969D007D4288 /* BaseJsonResponseBody.hpp */,
 			);
 			path = HttpClient;
 			sourceTree = "<group>";
@@ -157,7 +157,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				989A91542BF3320F007D4288 /* HttpClient.cpp in Sources */,
-				989A91D22BF3969D007D4288 /* BaseHttpResponseBody.cpp in Sources */,
+				989A91D22BF3969D007D4288 /* BaseJsonResponseBody.cpp in Sources */,
 				989A91452BF32C0B007D4288 /* main.cpp in Sources */,
 				989A91572BF332C7007D4288 /* Response.cpp in Sources */,
 			);

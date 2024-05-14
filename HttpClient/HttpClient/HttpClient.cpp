@@ -11,14 +11,16 @@
 #include <sstream>
 
 
-Response HttpClient::Request(const std::string& url, const std::vector<std::string>& headers, HTTPMethod requestMethod)
-{
+Response HttpClient::Request(const std::string& url, const std::vector<std::string>& headers, HTTPMethod requestMethod) {
     return performRequest(url, headers);
 }
 
+void HttpClient::Request(const std::string& url, const std::vector<std::string>& headers, HTTPMethod requestMethod, BaseJsonResponseBody& responseBody) {
+    Response response = performRequest(url, headers);
+    responseBody.encode(response.getJsonResponse());
+}
 
-Response HttpClient::performRequest(const std::string& url, const std::vector<std::string>& headers, const char* postData)
-{
+Response HttpClient::performRequest(const std::string& url, const std::vector<std::string>& headers, const char* postData) {
     CURL* curl;
     CURLcode res;
     std::string readBuffer;
