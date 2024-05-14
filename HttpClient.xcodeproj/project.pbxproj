@@ -37,6 +37,7 @@
 		989A91CC2BF360AC007D4288 /* json.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = json.hpp; sourceTree = "<group>"; };
 		989A91D02BF3969D007D4288 /* BaseJsonResponseBody.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = BaseJsonResponseBody.cpp; sourceTree = "<group>"; };
 		989A91D12BF3969D007D4288 /* BaseJsonResponseBody.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = BaseJsonResponseBody.hpp; sourceTree = "<group>"; };
+		989A91D42BF3B881007D4288 /* Doxyfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Doxyfile; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +72,7 @@
 		989A91432BF32C0B007D4288 /* HttpClient */ = {
 			isa = PBXGroup;
 			children = (
+				989A91D32BF3B7E2007D4288 /* Docs */,
 				989A91442BF32C0B007D4288 /* main.cpp */,
 				989A91CC2BF360AC007D4288 /* json.hpp */,
 				989A914E2BF3307F007D4288 /* HttpClient */,
@@ -97,6 +99,14 @@
 				989A91502BF331D2007D4288 /* libcurl.tbd */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		989A91D32BF3B7E2007D4288 /* Docs */ = {
+			isa = PBXGroup;
+			children = (
+				989A91D42BF3B881007D4288 /* Doxyfile */,
+			);
+			path = Docs;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
