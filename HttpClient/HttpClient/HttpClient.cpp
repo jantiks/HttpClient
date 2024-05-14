@@ -54,8 +54,6 @@ Response HttpClient::performRequest(const std::string& url, const std::vector<st
         curl_easy_cleanup(curl);
     }
     
-    std::cout << "ASD STATUS CODE: " << statusCode << "ASD HEADER RESPONSE: " << responseHeader << std::endl;
-
     return Response(statusCode, responseHeader, readBuffer);
 }
 

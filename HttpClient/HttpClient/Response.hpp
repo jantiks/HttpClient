@@ -23,6 +23,8 @@ public:
     const long statusCode() const;
     const std::string& headers() const;
     const std::string& responseText() const;
+
+    friend std::ostream& operator<<(std::ostream& os, const Response& response);
 };
 
 inline const long Response::statusCode() const {
